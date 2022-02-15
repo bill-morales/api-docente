@@ -18,6 +18,7 @@ class CreateDocente extends Migration
             $table->string("nombres");
             $table->string("apellidos");
             $table->string("dni");
+            $table->integer("id_usuario");
             $table->timestamps();
         });
     }

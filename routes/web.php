@@ -20,5 +20,5 @@ $router->get('/', function () use ($router) {
 $router->group(["prefix" => "api"], function() use($router) {
     $router->get("docentes/", ["uses" => "DocentesController@listar"]);
     $router->post("docentes/guardar", ["uses" => "DocentesController@guardar"]);
-    $router->post("docentes/actualizar/{docente}", ["uses" => "DocentesController@actualizar"]);
+    $router->get("docentes/user/{user_id}", ["uses" => "DocentesController@docenteByIdUsuario"]);
 });
